@@ -13,6 +13,9 @@
 		0F1F34AE193EB4D900418120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F1F34AC193EB4D900418120 /* Main.storyboard */; };
 		0F1F34B0193EB4D900418120 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F1F34AF193EB4D900418120 /* Images.xcassets */; };
 		0F1F34BC193EB4D900418120 /* Weather_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1F34BB193EB4D900418120 /* Weather_AppTests.swift */; };
+		0F681940193ECF0A00BB6D46 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68193F193ECF0A00BB6D46 /* Weather.swift */; };
+		0F681942193EDA4E00BB6D46 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F681941193EDA4E00BB6D46 /* CoreLocation.framework */; };
+		0F681944193EE4ED00BB6D46 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F681943193EE4ED00BB6D46 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		0F1F34B5193EB4D900418120 /* Weather AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Weather AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F1F34BA193EB4D900418120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F1F34BB193EB4D900418120 /* Weather_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_AppTests.swift; sourceTree = "<group>"; };
+		0F68193F193ECF0A00BB6D46 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		0F681941193EDA4E00BB6D46 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0F681943193EE4ED00BB6D46 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F681944193EE4ED00BB6D46 /* MobileCoreServices.framework in Frameworks */,
+				0F681942193EDA4E00BB6D46 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +67,8 @@
 		0F1F3497193EB4D900418120 = {
 			isa = PBXGroup;
 			children = (
+				0F681943193EE4ED00BB6D46 /* MobileCoreServices.framework */,
+				0F681941193EDA4E00BB6D46 /* CoreLocation.framework */,
 				0F1F34A2193EB4D900418120 /* Weather App */,
 				0F1F34B8193EB4D900418120 /* Weather AppTests */,
 				0F1F34A1193EB4D900418120 /* Products */,
@@ -77,6 +87,7 @@
 		0F1F34A2193EB4D900418120 /* Weather App */ = {
 			isa = PBXGroup;
 			children = (
+				0F68193F193ECF0A00BB6D46 /* Weather.swift */,
 				0F1F34A5193EB4D900418120 /* AppDelegate.swift */,
 				0F1F34AA193EB4D900418120 /* ViewController.swift */,
 				0F1F34AC193EB4D900418120 /* Main.storyboard */,
@@ -211,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F681940193ECF0A00BB6D46 /* Weather.swift in Sources */,
 				0F1F34AB193EB4D900418120 /* ViewController.swift in Sources */,
 				0F1F34A9193EB4D900418120 /* Weather_App.xcdatamodeld in Sources */,
 				0F1F34A6193EB4D900418120 /* AppDelegate.swift in Sources */,
@@ -401,6 +413,7 @@
 				0F1F34C1193EB4D900418120 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F1F34C2193EB4D900418120 /* Build configuration list for PBXNativeTarget "Weather AppTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +422,7 @@
 				0F1F34C4193EB4D900418120 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
