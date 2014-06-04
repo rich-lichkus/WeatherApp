@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Richard Lichkus. All rights reserved.
 //
 
+//testing commit
+
 import UIKit
 import CoreLocation
 import MobileCoreServices
