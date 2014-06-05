@@ -16,6 +16,7 @@
 		0F681940193ECF0A00BB6D46 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F68193F193ECF0A00BB6D46 /* Weather.swift */; };
 		0F681942193EDA4E00BB6D46 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F681941193EDA4E00BB6D46 /* CoreLocation.framework */; };
 		0F681944193EE4ED00BB6D46 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F681943193EE4ED00BB6D46 /* MobileCoreServices.framework */; };
+		0F98C573193FD64E0076355D /* UnitConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98C572193FD64E0076355D /* UnitConversion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		0F68193F193ECF0A00BB6D46 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		0F681941193EDA4E00BB6D46 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0F681943193EE4ED00BB6D46 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		0F98C56F193FD1BA0076355D /* Weather App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Weather App-Bridging-Header.h"; sourceTree = "<group>"; };
+		0F98C572193FD64E0076355D /* UnitConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitConversion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,7 @@
 				0F1F34A2193EB4D900418120 /* Weather App */,
 				0F1F34B8193EB4D900418120 /* Weather AppTests */,
 				0F1F34A1193EB4D900418120 /* Products */,
+				0F98C56F193FD1BA0076355D /* Weather App-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,12 +91,13 @@
 		0F1F34A2193EB4D900418120 /* Weather App */ = {
 			isa = PBXGroup;
 			children = (
-				0F68193F193ECF0A00BB6D46 /* Weather.swift */,
 				0F1F34A5193EB4D900418120 /* AppDelegate.swift */,
-				0F1F34AA193EB4D900418120 /* ViewController.swift */,
 				0F1F34AC193EB4D900418120 /* Main.storyboard */,
-				0F1F34AF193EB4D900418120 /* Images.xcassets */,
-				0F1F34A7193EB4D900418120 /* Weather_App.xcdatamodeld */,
+				0F98C577193FEC480076355D /* Utility */,
+				0F98C576193FDD980076355D /* Model */,
+				0F98C574193FDD730076355D /* View Controller */,
+				0F98C579193FEF610076355D /* Media */,
+				0F98C578193FEF4C0076355D /* Data Persistance */,
 				0F1F34A3193EB4D900418120 /* Supporting Files */,
 			);
 			path = "Weather App";
@@ -121,6 +126,46 @@
 				0F1F34BA193EB4D900418120 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F98C574193FDD730076355D /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0F1F34AA193EB4D900418120 /* ViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		0F98C576193FDD980076355D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F68193F193ECF0A00BB6D46 /* Weather.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0F98C577193FEC480076355D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0F98C572193FD64E0076355D /* UnitConversion.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		0F98C578193FEF4C0076355D /* Data Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				0F1F34A7193EB4D900418120 /* Weather_App.xcdatamodeld */,
+			);
+			name = "Data Persistance";
+			sourceTree = "<group>";
+		};
+		0F98C579193FEF610076355D /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				0F1F34AF193EB4D900418120 /* Images.xcassets */,
+			);
+			name = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F98C573193FD64E0076355D /* UnitConversion.swift in Sources */,
 				0F681940193ECF0A00BB6D46 /* Weather.swift in Sources */,
 				0F1F34AB193EB4D900418120 /* ViewController.swift in Sources */,
 				0F1F34A9193EB4D900418120 /* Weather_App.xcdatamodeld in Sources */,
@@ -341,9 +387,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Weather App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Weather App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +401,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Weather App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Weather App-Bridging-Header.h";
 			};
 			name = Release;
 		};

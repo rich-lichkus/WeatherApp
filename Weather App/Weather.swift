@@ -12,27 +12,17 @@ class Weather {
     
     var kelvinHighTemp : Double = 0
     var kelvinLoTemp : Double = 0
-    var cityName: String
+    var cityName: String = ""
     
     init(){
-        cityName = ""
+        
     }
     
     var farHighTemp :Double {
-        get {
-            return convertFromKelvinToFahrenheit(kelvinHighTemp)
-        }
+        return Convert.tempature(kelvinHighTemp, inCelsius:nil, inFarenheit:nil).Farenheit
     }
     
     var farLoTemp :Double {
-        get {
-            return convertFromKelvinToFahrenheit(kelvinLoTemp)
-        }
+        return Convert.tempature(kelvinLoTemp, inCelsius:nil, inFarenheit:nil).Farenheit
     }
-    
-    func convertFromKelvinToFahrenheit(kelvinTemp:Double) -> Double {
-        return (Double(kelvinTemp) - 273.0)*1.8 + 32.0
-    }
-    
-    
 }
